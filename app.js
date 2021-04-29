@@ -9,7 +9,7 @@ const userRoutes = require('./routes/user');
 mongoose.connect('mongodb+srv://yudino:yudinoAdmin@cluster0.bmpho.mongodb.net/myFirstDatabase?retryWrites=true&w=majorityy',
     { useNewUrlParser: true,
         useUnifiedTopology: true })
-    .then(() => console.log('Connexion à MongoDB réussie !'+ urlcourante))
+    .then(() => console.log('Connexion à MongoDB réussie !'))
     .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 const app = express();
