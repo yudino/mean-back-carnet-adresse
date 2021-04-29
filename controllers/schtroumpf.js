@@ -3,6 +3,7 @@ const fs = require('fs');
 
 exports.createFriend = (req, res, next) => {
     const schtroumpfObject = JSON.parse(req.body.schtroumpf);
+    delete schtroumpfObject._id;
     const schtroumpf = new Schtroumpf({
         ...schtroumpfObject,
         imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`

@@ -5,7 +5,6 @@ const schtroumpfSchema = mongoose.Schema({
     famille: { type: String, required: true },
     race: { type: String, required: true },
     nourriture: { type: String, required: true },
-    title: { type: String, required: true },
     imageUrl: { type: String, required: false },
 })
 
