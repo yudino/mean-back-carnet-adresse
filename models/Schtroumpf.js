@@ -6,6 +6,7 @@ const schtroumpfSchema = mongoose.Schema({
     race: { type: String, required: true },
     nourriture: { type: String, required: true },
     imageUrl: { type: String, required: false },
+    userId: { type: String, required: true },
 })
 
 module.exports = mongoose.model('Schtroumpf', schtroumpfSchema );
