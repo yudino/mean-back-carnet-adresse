@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const Friend = require('../models/Friend');
 const fs = require('fs');
 
 

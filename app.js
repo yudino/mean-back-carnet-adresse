@@ -3,9 +3,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
 
-const schtroumpfRoutes = require('./routes/schtroumpf');
 const userRoutes = require('./routes/user');
 const friendRoutes = require('./routes/friend');
+const userFriendRoutes = require('./routes/userFriend');
 
 mongoose.connect('mongodb+srv://yudino:yudinoAdmin@cluster0.bmpho.mongodb.net/smurfFriends?retryWrites=true&w=majority',
     { useNewUrlParser: true,
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 app.use('/images', express.static(path.join(__dirname, 'images')));
-//app.use('/api/carnet', schtroumpfRoutes);
+app.use('/api/carnet/my-friend', userFriendRoutes);
 app.use('/api/carnet', friendRoutes);
 app.use('/api/auth', userRoutes);
 
